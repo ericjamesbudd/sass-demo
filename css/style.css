@@ -4,6 +4,13 @@ Background: #4E4F48
 Highlight:  #C2CF52
 */
 /* CSS Reset */
+nav ul li a {
+  -moz-transition: background-color 0.3s ease-in;
+  -webkit-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+
 html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code, em, img, small, strong, sub, sup, var,
 b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
@@ -216,11 +223,6 @@ nav {
 nav ul li {
   float: left;
 }
-
-footer ul li {
-  float: left;
-}
-
 nav ul li a {
   position: relative;
   width: 112px;
@@ -235,14 +237,13 @@ nav ul li a {
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
   behavior: url(PIE.htc);
-  -moz-transition: background-color 0.3s ease-in;
-  -webkit-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
-  transition: background-color 0.3s ease-in;
 }
-
 nav ul li a:hover {
   background-color: #C2CF52;
+}
+
+footer ul li {
+  float: left;
 }
 
 nav ul.account {

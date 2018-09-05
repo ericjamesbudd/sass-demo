@@ -5,7 +5,7 @@ Highlight:  #C2CF52
 */
 /* CSS Reset */
 
-
+// Mixin
 @mixin borderRadius($radius: 7)
 {
   border-radius: $radius * 1px;
@@ -14,6 +14,15 @@ Highlight:  #C2CF52
   -ms-border-radius: $radius * 1px;
   -o-border-radius: $radius * 1px;
   behavior: url(PIE.htc);
+}
+
+// Extend
+%transition
+{
+  -moz-transition: background-color 0.3s ease-in;
+  -webkit-transition: background-color 0.3s ease-in;
+  -o-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
 }
 
 
@@ -259,30 +268,27 @@ nav
   ul li
   {
     float: left;
+
+    a {
+      position: relative;
+      width: 112px;
+      float: left;
+      background-color: #4E4F48;
+      margin-right: 5px;
+      text-align: center;
+      color: white;
+      @include borderRadius(7);
+      @extend %transition;
+
+      &:hover {
+        background-color: #C2CF52;
+      }
+    }
   }
 }
 
 footer ul li {
   float: left;
-}
-
-nav ul li a {
-  position: relative;
-  width: 112px;
-  float: left;
-  background-color: #4E4F48;
-  margin-right: 5px;
-  text-align: center;
-  color: white;
-  @include borderRadius(7);
-  -moz-transition: background-color 0.3s ease-in;
-  -webkit-transition: background-color 0.3s ease-in;
-  -o-transition: background-color 0.3s ease-in;
-  transition: background-color 0.3s ease-in;
-}
-
-nav ul li a:hover {
-  background-color: #C2CF52;
 }
 
 nav ul.account {
